@@ -10,9 +10,8 @@ simulador-automatos/
 │   │   │   ├── Types.hs
 │   │   │   ├── Parser.hs
 │   │   │   ├── Validator.hs
-│   │   │   ├── Simulador/
-│   │   │   │   ├── AFD.hs
-│   │   │   │   ├── AFN.hs
+│   │   │   ├── AFD.hs
+│   │   │   ├── AFN.hs
 │   │   ├── Interface/
 │   │   │   └── CLI.hs
 │   ├── test/
