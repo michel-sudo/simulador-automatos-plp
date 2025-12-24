@@ -15,7 +15,7 @@
 - `/src/Automato/AFN.hs` → Lógica de simulação AFN
 - `/src/Automato/Interface.hs` → Exibição dos resultados
 - `/examples/` → Exemplos testáveis
-
+```
 simulador-automatos/
 │
 ├── haskell/
@@ -50,4 +50,4 @@ simulador-automatos/
 ├── LICENSE
 ├── README.md
 └── CHANGELOG.md
-
+```
