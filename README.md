@@ -9,11 +9,11 @@
 
 ## Estrutura do projeto:
 
-- `/src/Automato/tipos-validacao.hs` → Definição de tipos e validação
-- `/src/Automato/entrada.hs` → Leitura de arquivos
+- `/src/Automato/Types.hs` → Definição de tipos
+- `/src/Automato/Reader.hs` → Leitura e verificação de arquivos
 - `/src/Automato/AFD.hs` → Lógica de simulação AFD
-- `/src/Automato/AFN.hs` → AFN
-- `/src/Automato/interface.hs` → Exibição dos resultados
+- `/src/Automato/AFN.hs` → Lógica de simulação AFN
+- `/src/Automato/Interface.hs` → Exibição dos resultados
 - `/examples/` → Exemplos testáveis
 
 simulador-automatos/
@@ -24,51 +24,18 @@ simulador-automatos/
 │   ├── src/
 │   │   ├── Automato/
 │   │   │   ├── Types.hs
-│   │   │   ├── Parser.hs
-│   │   │   ├── Validator.hs
+│   │   │   ├── Reader.hs
+│   │   │   ├── Interface.hs
 │   │   │   ├── AFD.hs
 │   │   │   ├── AFN.hs
-│   │   ├── Interface/
-│   │   │   └── CLI.hs
 │   ├── test/
 │   │   ├── Spec.hs
 │   │   ├── TestAFD.hs
 │   │   ├── TestAFN.hs
-│   ├── examples/
-│   │   ├── afd1.txt
-│   │   ├── afd2.txt
-│   │   ├── afn1.txt
 │   ├── simulador-automatos-hs.cabal
-│   ├── cabal.project
+│   ├── CHANGELOG.md
 │   ├── README.md
-│
-│
-├── prolog/
-│   ├── src/
-│   │   ├── automato.pl
-│   │   ├── simulador_afd.pl
-│   │   ├── simulador_afn.pl
-│   │   ├── parser.pl          % opcional
-│   │   ├── util.pl            % funções auxiliares
-│   ├── test/
-│   │   ├── test_afd.pl
-│   │   ├── test_afn.pl
-│   ├── examples/
-│   │   ├── afd_ex1.pl
-│   │   ├── afd_ex2.pl
-│   │   ├── afn_ex1.pl
-│   ├── run.pl
-│   ├── README.md
-│
-│
 ├── docs/
-│   ├── requisitos.md
-│   ├── especificacao.pdf
-│   ├── arquitetura.md
-│   ├── manual-usuario.md
-│   ├── planejamento.md
-│   ├── exemplos-de-autômatos.md
-│
 │
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
