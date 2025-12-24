@@ -1,4 +1,20 @@
-Estrutura do projeto:
+# Simulador de Autômatos - Versão Haskell
+
+## Funcionalidades
+✔ Leitura do autômato a partir de arquivo  
+✔ Simulação de AFD  
+✔ Simulação de AFN  
+✔ Exibição dos estados percorridos  
+✔ Verificação de aceitação
+
+## Estrutura do projeto:
+
+- `/src/Automato/tipos-validacao.hs` → Definição de tipos e validação
+- `/src/Automato/entrada.hs` → Leitura de arquivos
+- `/src/Automato/AFD.hs` → Lógica de simulação AFD
+- `/src/Automato/AFN.hs` → AFN
+- `/src/Automato/interface.hs` → Exibição dos resultados
+- `/examples/` → Exemplos testáveis
 
 simulador-automatos/
 │

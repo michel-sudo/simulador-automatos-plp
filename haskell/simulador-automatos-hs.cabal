@@ -33,11 +33,11 @@ executable simulador-automatos-hs
     -- Directories containing source files.
     hs-source-dirs:   app, src
     other-modules:
-        Automato.AFD,
-        Automato.AFN,
-        Automato.Parser,
-        Automato.Types,
-        Automato.Validador
+        automato.AFD
+        automato.AFN
+        automato.entrada
+        automato.tipos-validacao
+        automato.interface
 
     -- Base language which the package is written in.
     default-language: Haskell2010
