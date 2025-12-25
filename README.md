@@ -9,12 +9,12 @@
 
 ## Estrutura do projeto:
 
-- `/src/Automato/Types.hs` → Definição de tipos
-- `/src/Automato/Reader.hs` → Leitura e verificação de arquivos
-- `/src/Automato/AFD.hs` → Lógica de simulação AFD
-- `/src/Automato/AFN.hs` → Lógica de simulação AFN
-- `/src/Automato/Interface.hs` → Exibição dos resultados
-- `/examples/` → Exemplos testáveis
+- `/haskell/src/Automato/Types.hs` → Definição de tipos
+- `/haskell/src/Automato/Reader.hs` → Leitura e verificação de arquivos
+- `/haskell/src/Automato/AFD.hs` → Lógica de simulação AFD
+- `/haskell/src/Automato/AFN.hs` → Lógica de simulação AFN
+- `/haskell/src/Automato/Interface.hs` → Exibição dos resultados
+- `/haskell/examples/` → Exemplos testáveis
 ```
 simulador-automatos/
 │
