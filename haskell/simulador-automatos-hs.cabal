@@ -15,7 +15,7 @@ extra-doc-files:    CHANGELOG.md,
                     README.md
 
 common warnings
-    ghc-options: -Wall -02
+    ghc-options: -Wall -O2
 
 executable simulador-automatos-hs
     import:           warnings
@@ -23,13 +23,14 @@ executable simulador-automatos-hs
 
     -- Other library packages from which modules are imported.
     build-depends:
-        base ^>=4.17.2.0,
+        base >=4.17 && <5,
         text,
         containers,
         mtl,
         parsec,
-        megaparsec
-
+        megaparsec,
+        aeson,
+        bytestring
     -- Directories containing source files.
     hs-source-dirs:   app, src
     other-modules:

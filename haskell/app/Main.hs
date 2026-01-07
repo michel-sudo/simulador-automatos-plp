@@ -1,5 +1,8 @@
 module Main where
 
+import Automato.Interface
+import System.IO
+
 main :: IO ()
-main = putStrLn "Hello, Haskell!"
---teste
+main = do
+  menu
