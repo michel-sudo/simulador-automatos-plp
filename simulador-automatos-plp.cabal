@@ -35,7 +35,12 @@ license:            BSD-3-Clause
 license-file:       LICENSE
 
 -- The package author(s).
-author:             Michel Elias
+author:             Michel Elias,
+                    Matheus Costa,
+                    Luca Rodrigues,
+                    Danilo Henrique,
+                    André Victor,
+                    Mateus Henrique
 
 -- An email address to which users can send suggestions, bug reports, and patches.
 maintainer:         62392378+michel-sudo@users.noreply.github.com
@@ -69,7 +74,7 @@ executable simulador-automatos-plp
     -- Other library packages from which modules are imported.
     build-depends:    
         base ^>=4.20.0.0
-        
+
     -- Directories containing source files.
     hs-source-dirs:   app
 
