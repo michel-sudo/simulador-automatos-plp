@@ -9,45 +9,31 @@
 
 ## Estrutura do projeto:
 
-- `/haskell/src/Automato/Types.hs` → Definição de tipos
-- `/haskell/src/Automato/Reader.hs` → Leitura e verificação de arquivos
-- `/haskell/src/Automato/AFD.hs` → Lógica de simulação AFD
-- `/haskell/src/Automato/AFN.hs` → Lógica de simulação AFN
-- `/haskell/src/Automato/Interface.hs` → Exibição dos resultados
-- `/haskell/examples/` → Exemplos testáveis
+- `/app/Types.hs` → Definição de tipos
+- `/app/Reader.hs` → Leitura e verificação de arquivos
+- `/app/AFD.hs` → Lógica de simulação AFD
+- `/app/AFN.hs` → Lógica de simulação AFN
+- `/app/Interface.hs` → Exibição dos resultados
+- `/examples/` → Exemplos testáveis
+
 ```
 simulador-automatos/
 │
-├── haskell/
-│   ├── app/
-│   │   └── Main.hs
-│   ├── src/
-│   │   ├── Automato/
-│   │   │   ├── Types.hs
-│   │   │   ├── Reader.hs
-│   │   │   ├── Interface.hs
-│   │   │   ├── AFD.hs
-│   │   │   ├── AFN.hs
-│   ├── test/
-│   │   ├── Spec.hs
-│   │   ├── TestAFD.hs
-│   │   ├── TestAFN.hs
-│   ├── simulador-automatos-hs.cabal
-│   ├── CHANGELOG.md
-│   ├── README.md
+├── app/
+│   ├── Types.hs
+│   ├── Reader.hs
+│   ├── Interface.hs
+│   ├── AFD.hs
+│   ├── AFN.hs
+│   └── Main.hs
+│
 ├── docs/
+├── examples
+├── dist-newstyle/
 │
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   ├── feature_request.md
-│   ├── PULL_REQUEST_TEMPLATE.md
-│   ├── workflows/
-│       ├── haskell-ci.yml     % opcional
-│       ├── prolog-ci.yml      % opcional
-│
+├── simulador-automatos-hs.cabal
+├── README.md
 ├── .gitignore
 ├── LICENSE
-├── README.md
 └── CHANGELOG.md
 ```
