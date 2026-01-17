@@ -1,4 +1,5 @@
 module Main where
+import Interface
 
 main :: IO ()
-main = putStrLn "Hello, World!"
+main = loop Nothing 

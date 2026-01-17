@@ -73,7 +73,14 @@ executable simulador-automatos-plp
 
     -- Other library packages from which modules are imported.
     build-depends:    
-        base ^>=4.20.0.0
+        base ^>=4.20.0.0,
+        text,
+        containers,
+        mtl,
+        parsec,
+        megaparsec,
+        aeson,
+        bytestring
 
     -- Directories containing source files.
     hs-source-dirs:   app
