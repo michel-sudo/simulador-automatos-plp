@@ -80,7 +80,8 @@ executable simulador-automatos-plp
         parsec,
         megaparsec,
         aeson,
-        bytestring
+        bytestring,
+        filepath
 
     -- Directories containing source files.
     hs-source-dirs:   app

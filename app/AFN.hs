@@ -1,6 +1,7 @@
+{-# OPTIONS_GHC -Wno-name-shadowing #-}
 module AFN where
 
-import Types hiding (caminhos)
+import Types 
 import qualified Types as T
 import qualified Data.Set as Set
 import qualified Data.Map as Map
@@ -39,12 +40,21 @@ expandirSimbolo atm simbolo caminho =
 -- Função para expandir um caminho com transições epsilon
 expandirEpsilon :: Automato -> Caminho -> [Caminho]
 expandirEpsilon atm caminho =
-  let estadoAtual = last caminho
-      fecho = Set.toList (epsilonFecho atm (Set.singleton estadoAtual))
-      expansoes = [ caminho ++ [e] | e <- fecho, e /= estadoAtual ]
-  in if null expansoes
-        then [caminho]
-        else expansoes
+    dfs (last caminho) (Set.singleton (last caminho)) caminho
+  where
+    dfs :: Estado -> Set.Set Estado -> Caminho -> [Caminho]
+    dfs estadoAtual visitados caminhoAtual =
+        let destinosEpsilon =
+              Set.toList $
+                Map.findWithDefault Set.empty (estadoAtual, epsilon) (transicoesAFN atm)
+
+            novos =
+              [ dfs prox (Set.insert prox visitados) (caminhoAtual ++ [prox])
+              | prox <- destinosEpsilon
+              , not (Set.member prox visitados)
+              ]
+        in caminhoAtual : concat novos
+
 
 -- Função para calcular o fecho epsilon de um conjunto de estados
 epsilonFecho :: Automato -> Set.Set Estado -> Set.Set Estado

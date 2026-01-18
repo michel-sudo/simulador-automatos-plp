@@ -1,5 +1,7 @@
 {-# OPTIONS_GHC -Wno-name-shadowing #-}
+
 module Interface where
+
 import qualified Data.Text as Tx
 import System.IO (hFlush, stdout)
 import Types 
@@ -7,6 +9,8 @@ import Reader
 import qualified Types as T
 import AFD
 import AFN
+import System.FilePath ((</>))
+import qualified Data.Set as Set
 
 -- Loop principal do programa
 loop :: Maybe Automato -> IO ()
@@ -30,12 +34,17 @@ menuInicial = do
             putStrLn "Opção inválida."
             menuInicial
 
+automatosDir :: FilePath
+automatosDir = "examples"
+
 -- Função para carregar o autômato a partir de um arquivo JSON
 carregarAutomato :: IO ()
 carregarAutomato = do
-    putStr "Caminho do arquivo JSON: "
+    putStr "Nome do arquivo JSON: "
     hFlush stdout
-    caminho <- getLine
+    nomeArquivo <- getLine
+
+    let caminho = automatosDir </> nomeArquivo
 
     resultado <- lerAutomato caminho
     case resultado of
@@ -78,7 +87,7 @@ testarPalavra atm = do
         T.AFD {} -> do  
             case simularAFD atm palavra of
                 Left err -> do
-                    putStrLn ("Erro: " ++ err)
+                    putStrLn err
                     menuComAutomato atm
                 Right caminho -> do
                     exibirResultado [caminho] atm
@@ -86,11 +95,16 @@ testarPalavra atm = do
         T.AFN {} -> do
             case simularAFN atm palavra of
                 Left err -> do
-                    putStrLn ("Erro: " ++ err)
+                    putStrLn err
                     menuComAutomato atm
                 Right caminhos -> do
-                    exibirResultado caminhos atm
+                    exibirResultado (caminhosAceitos atm caminhos) atm
                     menuComAutomato atm
+
+-- Filtra os caminhos que levam a estados finais
+caminhosAceitos :: Automato -> [Caminho] -> [Caminho]
+caminhosAceitos atm =
+    filter (\c -> last c `Set.member` T.estadosFinais atm)
 
 -- Função para exibir o resultado da simulação
 exibirResultado :: [Caminho] -> Automato -> IO ()
