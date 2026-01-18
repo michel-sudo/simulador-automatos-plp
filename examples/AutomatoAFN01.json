@@ -1,0 +1,12 @@
+{
+    "tipo": "AFN",
+    "estados": ["q0", "q1", "q2", "q3", "q4"],
+    "alfabeto": ["a", "b"],
+    "estadoInicial": "q0",
+    "estadosFinais": ["q4", "q3"],
+    "transicoes": [
+        {"origem": "q0", "simbolo": "a", "destino": ["q1", "q2"]},
+        {"origem": "q2", "simbolo": "b", "destino": ["q4"]},
+        {"origem": "q1", "simbolo": "a", "destino": ["q3"]}
+    ]
+}

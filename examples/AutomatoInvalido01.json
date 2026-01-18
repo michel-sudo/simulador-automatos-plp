@@ -1,0 +1,9 @@
+{
+  "tipo": "AF",
+  "estados": ["q0"],
+  "alfabeto": ["a"],
+  "estadoInicial": "q0",
+  "estadosFinais": ["q0"],
+  "transicoes": []
+}
+

@@ -1,0 +1,11 @@
+{
+  "tipo": "AFD",
+  "estados": ["q0", "q1"],
+  "alfabeto": ["a"],
+  "estadoInicial": "q0",
+  "estadosFinais": ["q1"],
+  "transicoes": [
+    { "origem": "q0", "simbolo": "a", "destino": "q1" }
+  ]
+}
+
