@@ -1,0 +1,17 @@
+{
+  "tipo": "AFN",
+  "estados": ["q1", "q2", "q3", "q4"],
+  "alfabeto": ["0", "1"],
+  "estadoInicial": "q1",
+  "estadosFinais": ["q4"],
+  "transicoes": [
+    {"origem": "q1", "simbolo": "0", "destino": ["q1"]},
+    {"origem": "q1", "simbolo": "1", "destino": ["q1", "q2"]},
+    {"origem": "q2", "simbolo": "e", "destino": ["q3"]},
+    {"origem": "q2", "simbolo": "0", "destino": ["q3"]},
+    {"origem": "q3", "simbolo": "0", "destino": ["q3"]},
+    {"origem": "q3", "simbolo": "1", "destino": ["q4"]},
+    {"origem": "q4", "simbolo": "0", "destino": ["q4"]},
+    {"origem": "q4", "simbolo": "1", "destino": ["q4"]}
+  ]
+}
